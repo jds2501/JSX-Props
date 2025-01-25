@@ -16,8 +16,8 @@ function App() {
 		<div>
 			<h1>Inventory</h1>
 			<ol>
-				{inventoryItems.map((element) => {
-					return <li><InventoryItem name={element.name} type={element.type} quantity={element.quantity} price={element.price} /></li>
+				{inventoryItems.map((element, index) => {
+					return <li key={index}><InventoryItem name={element.name} type={element.type} quantity={element.quantity} price={element.price} /></li>
 				})}
 
 			</ol>
